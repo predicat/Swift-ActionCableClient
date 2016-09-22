@@ -331,10 +331,10 @@ extension ActionCableClient {
         }
         
         // Attempt Reconnection?
-        if let unwrappedError = error {
-          connectionError = ConnectionError(from: unwrappedError)
-            attemptReconnect = connectionError!.recoverable
-        }
+        // if let unwrappedError = error {
+        //   connectionError = ConnectionError(from: unwrappedError)
+        //     attemptReconnect = connectionError!.recoverable
+        // }
         
         // Reconcile reconncetion attempt with manual disconnect
         attemptReconnect = !manualDisconnectFlag && attemptReconnect
